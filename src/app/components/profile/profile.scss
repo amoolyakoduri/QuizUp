@@ -1,0 +1,27 @@
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    height: -webkit-fill-available;
+}
+
+.name-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4%;
+}
+
+.profile {
+    font-family: 'Metropolis', 'Avenir Next', 'Helvetica';
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+
+.img-container {
+    width: 20%;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}

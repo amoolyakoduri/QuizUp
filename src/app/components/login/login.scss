@@ -1,0 +1,63 @@
+@import '../src/assets/scss/var.scss';
+
+.t-login-body {
+    color: rgb(21, 32, 43);
+    background-color: rgb(230, 236, 240);
+    font-size: 18px;
+    margin: 0;
+    font-family: -system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.login-card {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.5;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+    font-family: 'Metropolis', 'Avenir Next', 'Helvetica';
+}
+
+.heading-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 8%;
+    padding-top: 8%;
+}
+
+.input-box {
+    margin: 0px;
+    font-family: 'Metropolis', 'Avenir Next', 'Helvetica';
+    font-size: inherit;
+    color: #666666;
+    border: #fafafa;
+    background: #ffffff;
+    border-bottom: .05rem solid;
+    border-bottom-color: #b3b3b3;
+}
+
+.card-container {
+    width: 30%;
+    height: 50%;
+}
+
+.label {
+    padding-left: 8%;
+}
+
+.input-container {
+    padding-right: 8%;
+}

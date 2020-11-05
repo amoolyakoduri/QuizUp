@@ -1,0 +1,156 @@
+@import './var.scss';
+.q-initial-loader {
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   img {
+      width: 100px;
+   }
+}
+
+//Basic style for containers with dark bg and white color text
+.q-dark-container {
+   background-color: $app-bg;
+   color: $app-text;
+}
+//LOGO style
+.q-nav-logo {
+   img {
+      height: 50px;
+   }
+   cursor: pointer;
+}
+
+//Images or photos
+.q-image {
+   transition: transform .2s;
+   &:hover {
+      transform: scale(2);
+   }
+}
+
+//Use for icons
+.q-icon {
+   cursor: pointer;
+   &:hover {
+      color: $app-theme;
+   }
+}
+
+//SOME COMMON BOX SHADOW STYLES
+.q-box-shadow1 {
+   -webkit-box-shadow: -10px 14px 6px -4px rgba(133,130,133,1);
+   -moz-box-shadow: -10px 14px 6px -4px rgba(133,130,133,1);
+   box-shadow: -10px 14px 6px -4px rgba(133,130,133,1);
+ }
+ .q-box-shadow2 {
+     -webkit-box-shadow: 0px 11px 7px -6px rgba(133,130,133,0.79);
+   -moz-box-shadow: 0px 11px 7px -6px rgba(133,130,133,0.79);
+   box-shadow: 0px 11px 7px -6px rgba(133,130,133,0.79);
+ }
+
+ //TEXT STYLES
+.q-small-text {
+   font-size: 15px;
+}
+.q-primary {
+   color: $app-text;
+}
+.q-primary-bold {
+   font-weight: bold;
+   color: $app-text;
+}
+.q-secondary {
+   color: $app-secondary-text;
+}
+.t-medium-text{
+   font-size: 20px;
+}
+.q-profile-link {
+   color: $app-text;
+}
+
+
+//OVERRIDING BOOTSTRAP STYLES
+.btn {
+   border-radius: 100px;
+   font-weight: bold;
+   padding: 8px 18px;
+   &:hover {
+      color: #1da1f2;
+   }
+}
+
+.border-white {
+    border-color: $app-border !important;
+}
+//MODAL STYLES
+.modal-header {
+   button {
+      color: $app-theme;
+      &:hover {
+         color: $app-theme;
+
+      }
+   }
+   border-bottom: 1px solid $app-border;
+}
+.modal-footer {
+   border-top: none;
+}
+
+//TOP NAV PAGE STYLES
+.q-topnav-container {
+   height: 53px;
+   width: 100%;
+   padding: 0px 20px;
+   border-bottom: 1px solid $app-border;
+   display: flex;
+   align-items: center;
+   position: absolute;
+   top: 0;
+   font-weight: bold;
+}
+
+//For Border Corners
+.q-sign-up-rounded {
+   border-radius: 0.75rem
+}
+
+.q-app-theme-color{
+   color: $app-theme;
+}
+
+.q-font-size-14 {
+   font-size: 14px;
+ }
+
+.q-font-size-16 {
+   font-size: 16px;
+ }
+
+ .q-container-border {
+   border-top: 1px solid $app-border;
+   border-left: 1px solid $app-border;
+   border-right: 1px solid $app-border;
+   border-bottom: 1px solid $app-border;
+ }
+
+ .q-rounded-border {
+   border: 1px solid $app-border;
+   border-radius: 15px;
+ }
+
+ //BOOTSTRAP TABS OVERRIDE
+.nav-tabs {
+   .nav-item {
+      flex: 1 !important;
+      text-align: center;
+   }
+   .nav-link {
+      .active {
+         background-color: $app-hover-theme !important;
+      }
+   }
+}

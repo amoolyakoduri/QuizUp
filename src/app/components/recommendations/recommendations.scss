@@ -1,0 +1,16 @@
+.heading-contaiener {
+    font-family: 'Metropolis', 'Avenir Next', 'Helvetica';
+    font-size: small;
+}
+
+.recommendations-container {
+    display: flex;
+    flex-direction: column;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+}

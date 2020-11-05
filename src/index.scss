@@ -1,0 +1,47 @@
+@import '../src/assets/scss/var.scss';
+@import '../src/assets/scss/styles.scss';
+
+// component styles
+@import '../src/app/components/loader/loader.scss';
+@import '../src//app/components/topnav/topnav.scss';
+@import '../src//app/components/login/login.scss';
+@import '../src//app/components/dashboard/dashboard.scss';
+@import '../src//app/components/userNav/userNav.scss';
+@import '../src//app/components/profile/profile.scss';
+@import '../src//app/components/recommendations/recommendations.scss';
+@import '../src//app/components/quiz-card/quiz-card.scss';
+
+body {
+  color: $app-text;
+  background-color: $app-bg;
+  font-size: 18px;
+  margin: 0;
+  font-family: -system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+i {
+  margin-right: 6px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;  /* for vertical scrollbars */
+  height: 6px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(56, 68, 77, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 68, 77, 0.5);
+  border-radius: 15px;
+}
