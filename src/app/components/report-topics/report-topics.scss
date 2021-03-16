@@ -1,0 +1,44 @@
+.rpt-parent {
+    margin-top : 3%;
+}
+
+.rpt-body {
+    border: 1px solid #e3e2e5;
+    border-radius: 10px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.rpt-th {
+    font-weight: 600;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 1%;
+    padding-left: 0%;
+}
+
+.rpt-tr:focus {
+    background-color: #f3f2f8;
+    border-radius: 10px;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f3f2f8;
+}
+
+.rpt-header {
+    background-color: white;
+    color: #150f2e;
+}
+
+.rpt-subcat {
+    width: 35%;
+}
+
+.rpt-table {
+
+}
+
+.rpt-tb {
+
+}

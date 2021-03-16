@@ -1,4 +1,4 @@
-$app-bg : rgb(247, 249, 252);
+$app-bg : #f3f2f8;
 $app-text: rgb(25,39,52);
 $app-secondary-text: rgb(136, 153, 166);
 $app-border: rgb(56, 68, 77);
@@ -14,3 +14,8 @@ $app-button-disabled: #1a7396;
 $app-danger: red;
 $app-success: green;
 $app-warning: orange;
+
+$sidebar-bg-color: #f3f2f8;
+$submenu-bg-color: rgb(136, 153, 166);
+$submenu-bg-color-collapsed: rgb(136, 153, 166);
+$sidebar-color: rgb(25,39,52);

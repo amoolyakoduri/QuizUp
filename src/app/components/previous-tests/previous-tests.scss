@@ -1,0 +1,53 @@
+.pt-parent {
+    width: -webkit-fill-available;
+    margin-right: 10%;
+    font-family: 'Mptropolis', 'Avenir Next', 'Helvptica';
+}
+
+.pt-header {
+    background-color: white;
+    padding: 3%;
+    color: #150f2e;
+}
+
+.pt-heading {
+
+    font-weight: 450;
+}
+
+.pt-h-layout {
+    display: flex;
+    flex-direction: row;
+}
+
+.pt-ptop {
+    padding: 4%;
+}
+
+.pt-btn-ptop {
+    padding-top: 3%;
+}
+
+.pt-btn {
+    color: #4b37a5;
+    background-color: #f3f2f8;
+    border-color: #f3f2f8;
+}
+
+.pt-btn:hover {
+    color: #31265c;
+    background-color: #f3f2f8;
+    border-color: #f3f2f8;
+}
+
+.pt-btn:focus {
+    color: #31265c;
+    background-color: #f3f2f8;
+    border-color: #f3f2f8;
+
+}
+
+.pt-list {
+    margin-left: 10%;
+    margin-right: 10%;
+}

@@ -1,0 +1,18 @@
+
+.tc-parent{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.ts-parent {
+    flex: 0 1 25%;
+    background-color: #f3f2f8;
+    border-right: 1px solid #e3e2e5;
+    height: 100vh;
+}
+
+.tl-parent {
+    flex: 0 1 75%;
+    background-color: #f3f2f8;
+}

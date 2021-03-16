@@ -1,8 +1,8 @@
 @import '../src/assets/scss/var.scss';
 
 .usernav {
-    color: $app-text;
-    background-color: $app-bg;
+    color: #ffffff;
+    background-color: #30265c;
     font-size: 18px;
     margin: 0;
 
@@ -11,6 +11,100 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.link {
-  color: $app-text;
+.un-link {
+  color: #ffffff;
+}
+
+.navbar-brand {
+  color: #ffffff;
+  margin-left: 3%;
+  font-size: larger;
+  font-weight: 700;
+}
+
+.navbar-opts {
+  background: none;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  color: #ffffff;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: large;
+  font-weight: 500;
+}
+
+.navbar-opts-container{
+  margin-left: 3%;
+  width: 40%;
+}
+
+.navbar-opts:hover {
+  color: #ffce59;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: large;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar-opts:visited {
+  color: #ffffff;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: large;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar-opts:active {
+  color: #ffce59;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: large;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.selected {
+  color: #ffce59;
+  font-weight: 700;
+}
+
+.rt-flt-margin {
+  margin-right: 8%;
+}
+
+.ddm {
+  width: 5px;
+}
+
+.un-btn {
+  background: none;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+  outline: inherit;
+  color: inherit;
+  margin-left: 15%;
+}
+
+.ddm-opt:hover {
+  color: #31265c;
+  font-weight: 600;
+}
+
+.un-btn:hover {
+  background: none;
+  // padding: 3%;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+  outline: inherit;
+  color: #31265c;
+  margin-left: 15%;
+  font-weight: 600;
 }

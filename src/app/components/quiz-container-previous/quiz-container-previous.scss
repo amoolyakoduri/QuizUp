@@ -1,0 +1,24 @@
+.qcp-flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.qcp-pad-left {
+    padding-left: 2%;
+    padding-right: 2%;
+    width: -webkit-fill-available;
+}
+
+.qcp-ques-style {
+    background-color: #ffffff;
+    font-family: 'Metropolis', 'Avenir Next', 'Helvetica';
+}
+
+.qcp-editor-container{
+    padding-top: 2%;
+    width: inherit;
+}
+
+.qcp-pad-top {
+    margin-top: 2%;
+}

@@ -1,0 +1,232 @@
+.rak-parent {
+    margin-top: 3%;
+}
+
+.rak-header {
+
+}
+
+.rak-body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1;
+}
+
+.rak-filter-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.rak-filter {
+    padding: 1%;
+    flex: 0 1 35%;
+}
+
+.rak-soln-list {
+    background-color: #f3f2f8;
+    padding: 5%;
+    border-radius: 15px;
+    display: grid;
+    grid-gap: 20px;
+    grid-auto-flow: column;
+}
+
+.rak-card {
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    padding: 8%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rak-card-crt {
+    border: 3px solid #35a594;
+}
+
+.rak-card-pcrt {
+    border: 3px solid #f7c95e;
+}
+
+.rak-card-incrt {
+    border: 3px solid #fa2551;
+}
+
+.rak-card-na {
+    border: 3px solid #dddee5;
+}
+
+.crt {
+    color : #35a594;
+}
+
+.pcrt {
+    color : #f7c95e;
+}
+
+.incrt {
+    color : grey;
+}
+
+.na {
+   color : #dddee5;
+}
+
+.rak-c-h {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10%;
+    font-size: larger;
+    font-weight: 500;
+}
+
+
+.rak-c-s {
+
+}
+
+.rak-btn-crt {
+    background: #ddf2f2;
+    border: none;
+    padding: 5%;
+  color: inherit;
+  font-weight: 500;
+  width: -webkit-fill-available;
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+}
+
+.rak-btn-pcrt {
+    background: #fff5de;
+    border: none;
+    padding: 5%;
+  color: inherit;
+  font-weight: 500;
+  width: -webkit-fill-available;
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+}
+
+.rak-btn-incrt {
+    background: #ffe1e6;
+    border: none;
+    padding: 5%;
+  color: inherit;
+  font-weight: 500;
+  width: -webkit-fill-available;
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+}
+
+.rak-btn-na {
+    background: #dddee5;
+    border: none;
+    padding: 5%;
+  color: inherit;
+  font-weight: 500;
+  width: -webkit-fill-available;
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+}
+
+.rak-btn-crt:hover {
+    background: #ddf2f2;
+    border: #8cd5d4;
+    padding: 5%;
+  color: inherit;
+  font-weight: 500;
+  width: -webkit-fill-available;
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+}
+
+.rak-btn-crt:focus {
+    background: #ddf2f2;
+    border: #8cd5d4;
+    padding: 5%;
+  color: inherit;
+  font-weight: 500;
+  width: -webkit-fill-available;
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+}
+
+.rak-btn-pcrt:hover {
+    background: #fff5de;
+    border: #ffd87c;
+    padding: 5%;
+  color: inherit;
+  font-weight: 500;
+  width: -webkit-fill-available;
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+}
+
+.rak-btn-pcrt:focus {
+    background: #fff5de;
+    border: #ffd87c;
+    padding: 5%;
+  color: inherit;
+  font-weight: 500;
+  width: -webkit-fill-available;
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+}
+
+.rak-btn-incrt:hover {
+    background: #ffe1e6;
+    border: #ff7e99;
+    padding: 5%;
+  color: inherit;
+  font-weight: 500;
+  width: -webkit-fill-available;
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+}
+
+.rak-btn-incrt:focus {
+    background: #ffe1e6;
+    border: #ff7e99;
+    padding: 5%;
+  color: inherit;
+  font-weight: 500;
+  width: -webkit-fill-available;
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+}
+
+.rak-btn-na:hover {
+    background: #dddee5;
+    border: none;
+    padding: 5%;
+  color: inherit;
+  font-weight: 500;
+  width: -webkit-fill-available;
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+}
+
+.rak-btn-na:focus {
+    background: #dddee5;
+    border: none;
+    padding: 5%;
+  color: inherit;
+  font-weight: 500;
+  width: -webkit-fill-available;
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+}

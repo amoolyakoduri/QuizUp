@@ -1,0 +1,13 @@
+.quiz-tuple-container {
+    font-family: 'Metropolis', 'Avenir Next', 'Helvetica';
+    font-size: medium;
+    width: -webkit-fill-available;
+    height: auto;
+    margin-top: 3%;
+}
+
+.q-detail {
+    font-family: 'Metropolis', 'Avenir Next', 'Helvetica';
+    font-size: medium;
+    padding: 2%;
+}

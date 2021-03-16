@@ -1,0 +1,38 @@
+.cr-jumbo-container{
+    margin: 1%;
+    background-color: white;
+    border-radius: 10px;
+    font-family: 'Metropolis', 'Avenir Next', 'Helvetica';
+    display: flex;
+    flex-direction: row;
+}
+
+.cr-container {
+    padding-left: 5%;
+}
+
+.cr-row-flex {
+    display: flex;
+    flex-direction: row;
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+
+.cr-pad-left {
+    padding-left: 6% ;
+}
+
+.cr-topics-style {
+    width: 76.84px;
+    height: 38px;
+}
+
+.cr-input {
+    border-color: #9c9c9c;
+}
+
+hr {
+    border: 0;
+    height: 100px;
+    width: 100%;
+ }

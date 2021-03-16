@@ -1,84 +1,131 @@
 import React, { Component , Fragment } from "react";
 import Topnav from "../topnav/topnav";
 import { Button} from 'reactstrap';
-import { Link, withRouter  } from "react-router-dom";
+import { Link , Redirect } from "react-router-dom";
 import classnames from "classnames";
-import { loginUser } from "../../../redux/actions/authActions";
 import { connect } from 'react-redux'
+import { loginUser} from '../../../redux/user-info/user-info-actions';
+import setAuthToken from '../../../config/setAuthToken';
+import jwt_decode from "jwt-decode";
+import store from "../../../store";
+import { setCurrentUser,logoutUser } from '../../../redux/user-info/user-info-actions';
+
 
 class Login extends Component {
 
     constructor() {
         super();
         this.state = {
-          emailId: "",
+          username: "",
           password: "",
           errors: {}
         };
       }
 
-    handleInvalidSubmit = (event, errors, values) => {
-    this.setState({ email: values.email, error: true });
-    }
-
     onChange = (event) => {
         let key = event.target.id;
         let value = event.target.value;
         this.setState({ [key]: value });
+        let errors = this.state.errors;
+        errors[key] = false;
+        this.setState({errors : errors})
+    }
+
+    validate = () => {
+        this.usernameValidation();
+        this.passwordValidation();
+        return !this.state.errors.username && !this.state.errors.password;
+      };
+
+    passwordValidation = () => {
+        let errors = this.state.errors;
+        if(this.state.password.trim() ==='' )
+            errors["password"] = 'Password is required';
+        else if(this.state.password.length<3)
+            errors["password"] = 'Password should be at least 3 characters long.';
+        else
+            errors["password"] = false;
+        this.setState({errors:errors});
+        return;
+    }
+
+    usernameValidation = () => {
+        let errors = this.state.errors;
+
+        if (this.state.username.trim() === '') {
+          errors["username"] = 'Username is required';
+          this.setState({errors:errors});
+          return;
+        }
+        errors["username"] = false;
+        this.setState({errors:errors});
+        return;
+      };
+
+    onClick = (event) => {
+        if(this.validate()){
+            this.props.loginUser(this.state.username,this.state.password)
+            .then(res => {
+                if(res.success)
+                this.props.history.push("/dashboard");
+            });
+        }
+        else {
+            //TODO
+        }
     }
 
     render() {
-        const { errors } = this.state;
         return (
             <Fragment>
-                <Topnav/>
                 <div className="login-container">
-                    <div class="card card-container">
+                    <div class="card login-card-container">
                         <div class="login-card">
-                            <div className="heading-container">
+                            <div className="login-heading-container">
                                 <h3>Login</h3>
                             </div>
                             <div class="form-group row">
-                                <label for="staticEmail" class="col-sm-3 col-form-label label">Email</label>
-                                <div class="col-sm-9 input-container">
+                                <label for="username" class="col-sm-3 col-form-label login-label">Username</label>
+                                <div class="col-sm-9 login-input-container">
                                 <input type="text"
-                                    error={errors.emailId}
-                                    className={classnames("form-control input-box", {invalid: errors.emailId})}
-                                    class="form-control input-box" onChange={this.onChange} value={this.state.emailId}
-                                    id="emialId"
-                                    placeholder="Email Id"
-                                    minLength="1"
-                                    maxLength="30"
+                                    className={classnames("form-control login-input-box", {invalid: this.state.errors.username})}
+                                    class="form-control login-input-box" onChange={this.onChange}
+                                    id="username"
+                                    placeholder="Username "
                                     required/>
+                                    { this.state.errors.username!=false &&
+                                        <sub className="invalid-sub">{this.state.errors.username}</sub>
+                                    }
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="inputPassword" class="col-sm-3 col-form-label label">Password</label>
-                                <div class="col-sm-9 input-container">
+                                <label for="password" class="col-sm-3 col-form-label login-label">Password</label>
+                                <div class="col-sm-9 login-input-container">
                                 <input type="password"
-                                    error={errors.password}
-                                    className={classnames("form-control input-box", {invalid: errors.password})}
+                                    // error={errors.password}
+                                    className={classnames("form-control login-input-box", {invalid: this.state.errors.password})}
                                     onChange={this.onChange}
-                                    value={this.state.password}
                                     id="password"
                                     placeholder="Password"
                                     minLength="1"
                                     maxLength="10"
                                     pattern="^[a-zA-Z]+$"
                                     required/>
+                                    { this.state.errors.password!=false &&
+                                        <sub className="invalid-sub">{this.state.errors.password}</sub>
+                                    }
                                 </div>
                             </div>
-                            <div className="heading-container">
-                                <Button color="primary" type="submit" size="sm">SignIn</Button>
+                            <div className="login-heading-container">
+                                <Button color="primary" type="submit" onClick={this.onClick} size="sm">Log In</Button>
                             </div>
-                            <div className="heading-container">
+
+                            <div className="login-heading-container">
                                 New to Quizzo? <span className="t-app-theme-color"><Link to="signUp"> Sign up now ></Link></span>
                     </div>
                         </div>
                     </div>
-
                 </div>
-
             </Fragment>
         );
     }
@@ -87,13 +134,12 @@ class Login extends Component {
 const mapStateToProps = state => ({
     auth: state.auth,
     errors: state.errors,
-    success:state.success
+    user: state.user,
 });
 
 const mapDispatchToProps = (dispatch) => {
     return {
-    //   loginSuccessDispatch: (payload) => { dispatch(onOwnerLoginSuccess(payload)) },
-    //   loginFailureDispatch: () => { dispatch(onLoginFailure()) }
+        loginUser: (username,password) => dispatch(loginUser(username,password)),
     }
   }
 

@@ -1,0 +1,53 @@
+.rt-parent {
+    width: -webkit-fill-available;
+    margin-right: 10%;
+    font-family: 'Metropolis', 'Avenir Next', 'Helvetica';
+}
+
+.rt-header {
+    background-color: white;
+    padding: 3%;
+    color: #150f2e;
+}
+
+.rt-heading {
+
+    font-weight: 450;
+}
+
+.rt-h-layout {
+    display: flex;
+    flex-direction: row;
+}
+
+.rt-ptop {
+    padding: 4%;
+}
+
+.rt-btn-ptop {
+    padding-top: 3%;
+}
+
+.rt-btn {
+    color: #4b37a5;
+    background-color: #f3f2f8;
+    border-color: #f3f2f8;
+}
+
+.rt-btn:hover {
+    color: #31265c;
+    background-color: #f3f2f8;
+    border-color: #f3f2f8;
+}
+
+.rt-btn:focus {
+    color: #31265c;
+    background-color: #f3f2f8;
+    border-color: #f3f2f8;
+
+}
+
+.rt-list {
+    margin-left: 10%;
+    margin-right: 10%;
+}

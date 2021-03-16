@@ -1,0 +1,59 @@
+@import '../src/assets/scss/var.scss';
+
+.signUp-card {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.5;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.signUp-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+    font-family: 'Metropolis', 'Avenir Next', 'Helvetica';
+}
+
+.signUp-heading-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 8%;
+    padding-top: 8%;
+}
+
+.signUp-input-box {
+    margin: 0px;
+    font-family: 'Metropolis', 'Avenir Next', 'Helvetica';
+    font-size: inherit;
+    color: #666666;
+    border: #fafafa;
+    background: #ffffff;
+    border-bottom: .05rem solid;
+    border-bottom-color: #b3b3b3;
+}
+
+.signUp-card-container {
+    width: 50%;
+    height: 50%;
+}
+
+.login-label {
+    padding-left: 8%;
+}
+
+.signUp-input-container {
+    padding-right: 8%;
+}
+
+.invalid {
+    background-color: #ffdddd;
+}
+
+.invalid-sub {
+    color: crimson;
+}

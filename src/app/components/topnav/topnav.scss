@@ -1,16 +1,85 @@
 @import '../src/assets/scss/var.scss';
 
 .topnav {
-    color: $app-text;
-    background-color: $app-bg;
-    font-size: 18px;
-    margin: 0;
+  color: #ffffff;
+  background-color: #30265c;
+  font-size: 18px;
+  margin: 0;
 
-      font-family: 'Metropolis', 'Avenir Next', 'Helvetica';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Metropolis', 'Avenir Next', 'Helvetica';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.link {
-  color: $app-text;
+.navbar-opts {
+  background: none;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  color: #ffffff;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: large;
+  font-weight: 500;
+}
+
+.navbar-opts-container{
+  margin-left: 3%;
+  width: 40%;
+}
+
+.navbar-opts:hover {
+  color: #ffce59;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: large;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar-opts:visited {
+  color: #ffffff;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: large;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar-opts:active {
+  color: #ffce59;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: large;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.selected {
+  color: #ffce59;
+  font-weight: 700;
+}
+
+
+
+.tn-link {
+  color: #ffffff;
+}
+
+.rt-flt-margin {
+  margin-right: 8%;
+}
+
+.active {
+  border: 1px solid #f3f2f8 !important;
+    background-color: #88bada;
+    border-radius: 200px;
+
+}
+
+.spacing {
+  margin-left: 15%;
+  margin-right: 15%;
 }

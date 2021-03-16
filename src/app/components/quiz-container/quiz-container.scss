@@ -1,0 +1,16 @@
+.qc-parent {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 100vh;
+}
+
+.qc-body {
+    flex: 0 1 75%;
+    border-right: 2px solid #d9d7e1;;
+}
+
+.qc-index {
+    flex: 0 1 25%;
+}

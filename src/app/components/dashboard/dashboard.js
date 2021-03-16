@@ -2,54 +2,29 @@ import React, { Component, Fragment } from "react";
 import UserNav from '../userNav/userNav';
 import Profile from '../profile/profile';
 import Recommendations from "../recommendations/recommendations";
+import History from '../history/history';
+import Analytics from "../analytics/analytics";
 
 class Dashboard extends Component {
 
     render() {
         return (
             <Fragment>
-                <UserNav />
-                <div className="container">
-                <div className="header">
+
+                <div className="db-container">
+                <div className="db-header shadow">
                     <Profile/>
                 </div>
-                <div className="analytics">
-                    Analytics
+                <div className="db-analytics shadow">
+                    <Analytics/>
                 </div>
-                <div className="recommendations">
+                <div className="db-recommendations shadow">
                     <Recommendations/>
                 </div>
-                <div className="history">
-                    history
+                <div className="db-history shadow">
+                    <History/>
                 </div>
                 </div>
-                {/* <div className="dashboard-container">
-                    <div className="left-container">
-                        <Profile/>
-                        <div class="card">
-                            <div class="card-body">
-                                This is some text within a card body.
-                            </div>
-                        </div>
-                    </div>
-                    <div className="right-container">
-                        <div class="card analytics">
-                            <div class="card-body">
-                                Analytics Info sits here.
-                            </div>
-                        </div>
-                        <div class="card history">
-                            <div class="card-body">
-                                Previously curated quizzes
-                            </div>
-                        </div>
-                        <div class="card recommendations">
-                            <div class="card-body">
-                                Recommended quizzes
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
             </Fragment>
         );
     }

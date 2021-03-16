@@ -1,0 +1,70 @@
+.ro-parent {
+    display: flex;
+    flex-direction: column;
+}
+
+.ro-header {
+
+}
+
+.ro-body {
+    display: flex;
+    flex-direction: row;
+}
+
+.ro-score {
+    margin: 2%;
+    padding: 1%;
+    border-radius: 10px;
+    border: 1px solid #f2f1f3;
+    flex: 0 1 20%;
+    height: max-content;
+}
+
+.ro-time {
+    margin: 2%;
+    padding: 1%;
+    border-radius: 10px;
+    border: 1px solid #f2f1f3;
+    flex: 0 1 35%;
+}
+
+.ro-accuracy {
+    margin: 2%;
+    padding: 1%;
+    border-radius: 10px;
+    border: 1px solid #f2f1f3;
+    flex: 0 1 35%;
+}
+
+.ro-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 1px solid #e3e2e5;font-size: small;
+    color: #404b56;
+
+}
+
+.ro-tm-acc {
+    display: flex;
+    flex-direction: column;
+}
+
+.ro-chart {
+    flex: 0 1 40%;
+}
+
+.ro-list {
+    flex: 0 1 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ro-tm-acc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

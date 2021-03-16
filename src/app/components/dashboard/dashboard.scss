@@ -1,47 +1,47 @@
-.container {
+.db-container {
     display: grid;
-    grid-template-columns: 75% 25%;
-    grid-template-rows: 15vw 40vw 20vw;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 15vw 40vw 50vw;
     grid-gap: 1em;
   }
 
-.header {
+.db-header {
 grid-column: 1 / span 2;
 }
 
-.footer {
+.db-footer {
     grid-column: 1 / span 2;
     }
 
   /* Demo Specific Styles */
-.container {
-    margin: 0 auto;
-    max-width: 56em;
-    padding: 1em 0;
+.db-container {
+  margin: 0 auto;
+  max-width: 74%;
+  padding: 1em 0;
   }
 
-.header {
+.db-header {
     background: #eaeaea;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.analytics {
+.db-analytics {
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.db-recommendations {
     background: #eaeaea;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.recommendations {
-    background: #eaeaea;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.history {
+.db-history {
     background: #eaeaea;
     display: flex;
     align-items: center;
@@ -56,12 +56,12 @@ grid-column: 1 / span 2;
     justify-content: space-around;
 }
 
-.left-container {
+.db-left-container {
     display: flex;
     flex-direction: column;
 }
 
-.right-container {
+.db-right-container {
     display: flex;
     flex-direction: column;
 }

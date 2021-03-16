@@ -1,4 +1,4 @@
-import { STARTLOADER, STOPLOADER, SETMSG, CLRMSG } from "../actions/action-types";
+import { STARTLOADER, STOPLOADER, SETMSG, CLRMSG } from "../action-types";
 
 const initialState = {
     loaderClass : 'loader-hide',

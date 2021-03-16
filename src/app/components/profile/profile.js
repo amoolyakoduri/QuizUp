@@ -23,10 +23,10 @@ class Profile extends Component {
             <Fragment>
                 <div class="card profile">
                     <div className="profile-container">
-                        <div className="img-container">
-                            <img src={displayPic} className="img" width="30" height="30" alt="" loading="lazy"/>
+                        <div className="p-img-container">
+                            <img src={displayPic} className="p-img" width="30" height="30" alt="" loading="lazy"/>
                         </div>
-                        <div className="name-container">
+                        <div className="p-name-container">
                             <div>
                                 {this.state.firstName + " " + this.state.lastName}
                             </div>

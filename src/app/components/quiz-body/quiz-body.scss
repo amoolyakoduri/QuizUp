@@ -1,0 +1,126 @@
+.qcb-parent {
+    margin-top: 5%;
+    font-family: 'Metropolis', 'Avenir Next', 'Helvetica';
+    color: #150f2e;
+}
+
+.qcb-ques-cont {
+    background-color: white;
+    padding-top: 4%;
+    padding-left: 4%;
+    padding-right: 4%;
+    border-radius: 10px;
+}
+
+.qcb-ques-n {
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.qcb-ques-q {
+    padding-top: 3%;
+    font-weight: 500;
+}
+
+.qcb-ques-inst {
+    padding-top: 3%;
+    font-weight: 500;
+    padding-bottom: 1%;
+}
+
+.qcb-ques-a {
+    // border-top: 1px solid #d9d7e1;
+}
+
+.qb-mcsc {
+
+}
+
+.qb-mcsc-a-cont {
+    border-top: 1px solid #d9d7e1;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+}
+
+.qb-mcsc-a-cont:hover {
+    background-color: #f3f2f8;
+    border: none;
+    border-radius: 10px;
+}
+
+.qb-a-mcsc-opt {
+    width: -webkit-fill-available;
+    margin-left: 3%;
+}
+
+
+.qb-a-mcsc-opt {
+
+}
+
+.qcb-footer {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    color: #4b37a5;
+    text-align: center;
+    height: 15%;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 2%;
+    justify-content: space-around;
+    font-size: larger;
+    border-radius: 5px;
+    padding-bottom: 5%;
+    font-weight: 500;
+    border-top: 1px solid #d9d7e1;
+}
+
+.qcb-btn {
+    color: #4b37a5;
+    background-color: #f3f2f8;
+    border-color: #f3f2f8;
+    border-radius: 5px;
+    font-size: unset;
+    font-weight: 500;
+}
+
+.qcb-btn:hover {
+    color: #4b37a5;
+    background-color: #f3f2f8;
+    border-color: #f3f2f8;
+    border-radius: 5px;
+}
+
+.qcb-btn:focus {
+    color: #4b37a5;
+    background-color: #f3f2f8;
+    border-color: #f3f2f8;
+    border-radius: 5px;
+}
+
+.qcb-cbox {
+    padding-top: 1%;
+    font-weight: 500;
+    background-color: #f3f2f8;
+    padding-left: 6%;
+    padding-right: 4%;
+    height: fit-content;
+    padding-bottom: 1%;
+    border-radius: 5px;
+}
+
+.qb-pad-top {
+    margin-top: 2%;
+}
+
+.qb-ques-style {
+    background-color: #ffffff;
+    font-family: 'Metropolis', 'Avenir Next', 'Helvetica';
+}
+
+.qcb-radio {
+
+}

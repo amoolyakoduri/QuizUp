@@ -1,0 +1,88 @@
+.ts {
+    font-family: 'Metropolis', 'Avenir Next', 'Helvetica';
+    margin-left: 30%;
+    background-color: white;
+    height: 100vh;
+}
+
+.ts-heading {
+    color: #736f81;
+    padding-top: 15%;
+    padding-left: 6%;
+    font-size: smaller;
+    font-weight: 600;
+}
+
+.ts-opt {
+    padding: 3%;
+    font-weight: 500;
+    color: #1c1634;
+    margin: 3%;
+}
+
+.ts-opt:hover {
+    padding: 3%;
+    font-weight: 500;
+    color: #1c1634;
+    background-color: #f3f2f8;
+    border-radius: 5%;
+}
+
+.ts_selected {
+    padding: 3%;
+    font-weight: 500;
+    color: #1c1634;
+    background-color: #f3f2f8;
+    border-radius: 5%;
+}
+
+.ts-unbtn {
+    background: none;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+    outline: inherit;
+    color: inherit;
+    font-weight: 500;
+    color: #1c1634;
+    width: -webkit-fill-available;
+    text-align: left;
+  }
+
+  .ts-unbtn:hover {
+    background: none;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+    outline: inherit;
+    color: inherit;
+    font-weight: 500;
+    color: #1c1634;
+    width: -webkit-fill-available;
+    text-align: left;
+  }
+
+  .ts-unbtn:focus {
+    background: none;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+    outline: inherit;
+    color: inherit;
+    font-weight: 500;
+    color: #1c1634;
+    width: -webkit-fill-available;
+    text-align: left;
+  }
+
+  .ts-unlnk {
+    color: #1c1634;
+  }
+
+  .ts-unlnk:hover {
+    color: #1c1634;
+    text-decoration: none;
+  }

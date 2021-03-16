@@ -1,17 +1,5 @@
 @import '../src/assets/scss/var.scss';
 
-.t-login-body {
-    color: rgb(21, 32, 43);
-    background-color: rgb(230, 236, 240);
-    font-size: 18px;
-    margin: 0;
-    font-family: -system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 .login-card {
     display: block;
     width: 100%;
@@ -24,21 +12,21 @@
 }
 
 .login-container {
-    height: 100vh;
+    height: 600px;
     display: flex;
     justify-content: center;
     padding-top: 3%;
     font-family: 'Metropolis', 'Avenir Next', 'Helvetica';
 }
 
-.heading-container {
+.login-heading-container {
     display: flex;
     justify-content: center;
     padding-bottom: 8%;
     padding-top: 8%;
 }
 
-.input-box {
+.login-input-box {
     margin: 0px;
     font-family: 'Metropolis', 'Avenir Next', 'Helvetica';
     font-size: inherit;
@@ -49,15 +37,22 @@
     border-bottom-color: #b3b3b3;
 }
 
-.card-container {
-    width: 30%;
-    height: 50%;
+.login-card-container {
+    width: 50%;
 }
 
-.label {
+.login-label {
     padding-left: 8%;
 }
 
 .input-container {
     padding-right: 8%;
+}
+
+.invalid {
+    background-color: #ffdddd;
+}
+
+.invalid-sub {
+    color: crimson;
 }

@@ -1,6 +1,6 @@
 @import '../src/assets/scss/var.scss';
 @import '../src/assets/scss/styles.scss';
-
+@import '~react-pro-sidebar/dist/scss/styles.scss';
 // component styles
 @import '../src/app/components/loader/loader.scss';
 @import '../src//app/components/topnav/topnav.scss';
@@ -10,6 +10,29 @@
 @import '../src//app/components/profile/profile.scss';
 @import '../src//app/components/recommendations/recommendations.scss';
 @import '../src//app/components/quiz-card/quiz-card.scss';
+@import '../src//app/components/history/history.scss';
+@import '../src//app/components/analytics/analytics.scss';
+@import '../src//app/components/create/create.scss';
+@import '../src//app/components/quiz-container/quiz-container.scss';
+@import '../src//app/components/quiz-body/quiz-body.scss';
+@import '../src//app/components/quiz-index/quiz-index.scss';
+@import '../src//app/components/sidenav/sidenav.scss';
+@import '../src//app/components/editor/editor.scss';
+@import '../src//app/components/question-container/question-container.scss';
+@import '../src/app/components/tests-container/tests-container.scss';
+@import '../src/app/components/tests-sidenav/tests-sidenav.scss';
+@import './app/components/tests-listings/tests-listings.scss';
+@import './app/components/explore-tests/explore-tests.scss';
+@import './app/components/recommended-tests/recommended-tests.scss';
+@import './app/components/previous-tests/previous-tests.scss';
+@import './app/components/test-list-box/test-list-box.scss';
+@import './app/components/create-tests/create-tests.scss';
+@import './app/components/quiz-nav/quiz-nav.scss';
+@import './app/components/report/report.scss';
+@import './app/components/report-nav/report-nav.scss';
+@import './app/components/report-overall/report-overall.scss';
+@import './app/components/report-topics/report-topics.scss';
+@import './app/components/report-ans-key/report-ans-key.scss';
 
 body {
   color: $app-text;
