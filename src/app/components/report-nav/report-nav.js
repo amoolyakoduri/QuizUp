@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 class ReportNav extends Component {
 
@@ -11,9 +12,8 @@ class ReportNav extends Component {
       <Fragment>
       <div className="rn-parent">
         <nav className="navbar navbar-expand-lg py-4">
-        <i class="fas fa-arrow-left"></i>
-          <a className="navbar-brand" href="/tests/previous">
-          Back
+          <a className="rn-navbar-brand" href="/tests/previous">
+          <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
           </a>
           <div className="rn-title">
           1000 Analog Communications MCQs Report

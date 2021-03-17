@@ -35,29 +35,30 @@ openPrevious = () => {
 
 
     render() {
-        const { path, url } = this.props.match;
+        const { url } = this.props.match;
+        const pathname = this.props.location.pathname;
         return (
             <Fragment>
                 <div className="ts">
                     <h4 className="ts-heading">TESTS</h4>
                     <div className="ts-opts">
                         <Link className="ts-unlnk" to={`${url}/create`}>
-                            <div className={classnames("ts-opt", {ts_selected: this.state.selected === "create" ? true : false})}>
+                            <div className={classnames("ts-opt", {ts_selected: pathname === "/tests/create" ? true : false})}>
                                 Create
                             </div>
                         </Link>
                         <Link className="ts-unlnk" to={`${url}/explore`}>
-                            <div className={classnames("ts-opt", {ts_selected: this.state.selected === "explore" ? true : false})}>
+                            <div className={classnames("ts-opt", {ts_selected: pathname === "/tests/explore" ? true : false})}>
                                 Explore
                             </div>
                         </Link>
                         <Link className="ts-unlnk" to={`${url}/recommended`}>
-                            <div className={classnames("ts-opt", {ts_selected: this.state.selected === "recommended" ? true : false})}>
+                            <div className={classnames("ts-opt", {ts_selected: pathname === "/tests/recommended" ? true : false})}>
                                 Recommended
                             </div>
                         </Link>
                         <Link className="ts-unlnk" to={`${url}/previous`}>
-                            <div className={classnames("ts-opt", {ts_selected: this.state.selected === "previous" ? true : false})}>
+                            <div className={classnames("ts-opt", {ts_selected: pathname === "/tests/previous" ? true : false})}>
                                 Previous
                             </div>
                         </Link>

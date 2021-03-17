@@ -6,7 +6,9 @@ import  {
     GO_TO_NEXT,
     CLEAR_RESPONSE,
     SET_QUES_STATUS,
-    SET_RESPONSE
+    SET_RESPONSE,
+    START_TIMER,
+    SET_ELAPSED_TIME
   } from '../action-types';
 import axios from "axios";
 import config from '../../config/constants';
@@ -41,6 +43,19 @@ export const setQuesStatus = (review) => dispatch => {
     })
 }
 
+export const startTimer = (startTime,curQues) => dispatch => {
+    dispatch({
+        type : START_TIMER,
+        payload : {startTime,curQues}
+    })
+}
+
+export const setElapsedTime = (elapsedTime,curQues) => dispatch => {
+    dispatch({
+        type : SET_ELAPSED_TIME,
+        payload : {elapsedTime,curQues}
+    })
+}
 
 export const startQuiz = (quizStarterDetails) => dispatch => {
     return axios({
@@ -52,7 +67,7 @@ export const startQuiz = (quizStarterDetails) => dispatch => {
         {
             let questions = res.data;
             questions.forEach(ques => {
-                ques["time"] = 0;
+                ques["startTime"] = null;
                 ques["status"] = "Not Opened";
                 ques["elapsedTime"] = 0;
                 ques["ans"] = "";

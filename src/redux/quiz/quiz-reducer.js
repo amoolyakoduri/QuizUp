@@ -1,5 +1,6 @@
 import { QUIZ_DETAILS_SUCCESS,SET_CUR_QUES,
-    CLEAR_RESPONSE, SET_QUES_STATUS, SET_RESPONSE
+    CLEAR_RESPONSE, SET_QUES_STATUS, SET_RESPONSE, START_TIMER,
+    SET_ELAPSED_TIME
     } from "../action-types";
 
 const initialState = {};
@@ -35,6 +36,22 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 questions: questions2
+            }
+        case START_TIMER:
+            let questions4 = Object.assign([],state.questions);
+            let ques4 = questions4[action.payload.curQues];
+            ques4.startTime = action.payload.startTime;
+            return {
+                ...state,
+                questions: questions4
+            }
+        case SET_ELAPSED_TIME:
+            let questions5 = Object.assign([],state.questions);
+            let ques5 = questions5[action.payload.curQues];
+            ques5.elapsedTime = ques5.elapsedTime+action.payload.elapsedTime;
+            return {
+                ...state,
+                questions: questions5
             }
         default:
             return state;

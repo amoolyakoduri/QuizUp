@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import { connect } from 'react-redux'
 import { Button } from "react-bootstrap";
 import { setCurQues, setQuesStatus, clearResponse,
-        setResponse } from '../../../redux/quiz/quiz-actions';
+        setResponse,startTimer,setElapsedTime } from '../../../redux/quiz/quiz-actions';
 
 class QuizBody extends Component {
 
@@ -14,19 +14,34 @@ class QuizBody extends Component {
     }
 
     componentDidMount(){
-        if(this.props.quiz && this.props.quiz.curQues>=0){
+        if(this.props.quiz && this.props.quiz?.questions){
+            let curQues = this.props.quiz.curQues;
             let now = new Date();
-            this.setState({ startDate : now });
-            if(this.props.quiz &&
-                this.props.quiz.questions[this.props.quiz.curQues].status!=="Review"){
-                    if(this.props.quiz.questions[this.props.quiz.curQues].ans==="")
-                        this.props.setQuesStatus("Not Answered");
-                    else
-                        this.props.setQuesStatus("Answered");
-            }
-            else {
-                // do nothing
-            }
+            this.props.startTimer(now,curQues);
+            this.props.setQuesStatus("Not Answered");
+        }
+    }
+
+    componentDidUpdate(prevProps,prevState){
+        let prevCurQues = prevProps.quiz.curQues;
+        let curQues = this.props.quiz.curQues;
+        if(prevProps.quiz && curQues>=0
+             && prevCurQues!==curQues){
+                if( prevCurQues>=0){
+                    this.props.stopQuesTimer(prevProps.quiz.questions[prevCurQues].startTime,prevCurQues);
+                }
+                let now = new Date();
+                this.props.startTimer(now,curQues);
+                if(this.props.quiz &&
+                    this.props.quiz.questions[curQues].status!=="Review"){
+                        if(this.props.quiz.questions[curQues].ans==="")
+                            this.props.setQuesStatus("Not Answered");
+                        else
+                            this.props.setQuesStatus("Answered");
+                }
+                else {
+                    // do nothing
+                }
         }
     }
 
@@ -58,7 +73,6 @@ class QuizBody extends Component {
 
     prevQues = () => {
         if(this.props.quiz && this.props.quiz.curQues>0) {
-            this.props.stopQuesTimer(this.state.startDate);
             this.props.setCurQues(this.props.quiz.curQues-1);
         }
         else {
@@ -68,7 +82,6 @@ class QuizBody extends Component {
 
     nextQues = () => {
         if(this.props.quiz && this.props.quiz.curQues<this.props.quiz.questions.length) {
-            this.props.stopQuesTimer(this.state.startDate);
             this.props.setCurQues(this.props.quiz.curQues+1);
         }
         else {
@@ -173,6 +186,8 @@ const mapDispatchToProps = (dispatch) => {
         setCurQues : (curQues) => { return dispatch(setCurQues(curQues))},
         setQuesStatus : (status) => { return dispatch(setQuesStatus(status))},
         clearResponse : () => { return dispatch(clearResponse())},
+        startTimer : (startTime,curQues) => { return dispatch(startTimer(startTime,curQues))},
+        setElapsedTime : (elapsedTime,curQues) => { return dispatch(setElapsedTime(elapsedTime,curQues))},
     }
   }
 

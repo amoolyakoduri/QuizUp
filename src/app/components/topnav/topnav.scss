@@ -11,7 +11,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.navbar-opts {
+.tn-navbar-brand {
+  color: #ffffff;
+  margin-left: 3%;
+  font-size: larger;
+  font-weight: 700;
+}
+
+.tn-navbar-opts {
   background: none;
 	border: none;
 	padding: 0;
@@ -22,24 +29,24 @@
   margin-left: 10%;
   margin-right: 10%;
   font-size: large;
-  font-weight: 500;
+  font-weight: 700;
 }
 
-.navbar-opts-container{
+.tn-navbar-opts-container{
   margin-left: 3%;
   width: 40%;
 }
 
-.navbar-opts:hover {
+.tn-navbar-opts:hover {
   color: #ffce59;
   margin-left: 10%;
   margin-right: 10%;
   font-size: large;
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: none;
 }
 
-.navbar-opts:visited {
+.tn-navbar-opts:visited {
   color: #ffffff;
   margin-left: 10%;
   margin-right: 10%;
@@ -48,19 +55,21 @@
   text-decoration: none;
 }
 
-.navbar-opts:active {
+.tn-navbar-opts:active {
   color: #ffce59;
   margin-left: 10%;
   margin-right: 10%;
   font-size: large;
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: none;
 }
 
-.selected {
+.tn-selected,.tn-selected:focus, .tn-selected:hover   {
   color: #ffce59;
   font-weight: 700;
+  outline: none;
 }
+
 
 
 
@@ -68,18 +77,18 @@
   color: #ffffff;
 }
 
-.rt-flt-margin {
+.tn-rt-flt-margin {
   margin-right: 8%;
 }
 
-.active {
+.tn-active {
   border: 1px solid #f3f2f8 !important;
     background-color: #88bada;
     border-radius: 200px;
 
 }
 
-.spacing {
+.tn-spacing {
   margin-left: 15%;
   margin-right: 15%;
 }

@@ -36,36 +36,34 @@ class UserNav extends Component {
         { this.props.user && this.props.user.isLoggedIn &&
       <div>
         <nav className="navbar navbar-expand-lg usernav">
-          <a className="navbar-brand" href="/about">
-            {/* <img src={loader} width="30" height="30" alt="" loading="lazy"/> */}
+          <a className="un-navbar-brand" href="/about">
             QuizUp!
           </a>
-          <div className="navbar-opts-container">
+          <div className="un-navbar-opts-container">
           <button
-          className={classnames("navbar-opts", {selected: path === "/dashboard" ? true : false})}
+          className={classnames("un-navbar-opts", {"un-selected": path === "/dashboard" ? true : false})}
           active={true} onClick={this.redirectToDashboard}>
             Dashboard
           </button>
 
           <button
-          className={classnames("navbar-opts", {selected: path === "/create" ? true : false})}
+          className={classnames("un-navbar-opts", {"un-selected": path.startsWith("/tests/") ? true : false})}
           onClick={this.redirectToCreate}>
             Tests
           </button>
           </div>
 
-          <div className="collapse navbar-collapse rt-flt-margin" id="navbarSupportedContent">
-            <ul className="navbar-nav ml-auto">
+          <div className="collapse navbar-collapse un-rt-flt-margin" id="navbarSupportedContent">
+            <ul className="navbar-nav un-ml-auto">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle navbar-opts" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle un-navbar-opts" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   {this.props.user.username}
                 </a>
                 <div class="dropdown-menu dropdown-menu-lg-left" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item ddm-opt" href="/profile">Profile</a>
-                  <a class="dropdown-item ddm-opt" href="/settings">Settings</a>
+                  <a class="dropdown-item un-ddm-opt" href="/profile">Profile</a>
+                  <a class="dropdown-item un-ddm-opt" href="/settings">Settings</a>
                   <div class="dropdown-divider"></div>
                   <Button className="un-btn" onClick={this.logout} >Logout</Button>
-                  {/* <a class="dropdown-item" href="/logout">Logout</a> */}
                 </div>
               </li>
             </ul>

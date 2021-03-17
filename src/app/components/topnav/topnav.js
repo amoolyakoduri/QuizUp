@@ -15,51 +15,30 @@ class TopNav extends Component {
   }
 
   render() {
-
-    let classes = "nav-link t-font-size-14 tn-link";
-    // className={classes+ this.props.location.pathname==="about" ? " active" : ""}
     return (
       <Fragment>
         { !this.props.isLoggedIn &&
       <div>
         <nav className="navbar navbar-expand-lg topnav">
-          <a className="navbar-brand" href="/about">
-            {/* <img src={loader} width="30" height="30" alt="" loading="lazy"/> */}
+          <a className="tn-navbar-brand" href="/about">
             QuizUp!
           </a>
-          <div className="collapse navbar-collapse rt-flt-margin" id="navbarSupportedContent">
-            <ul className="navbar-nav ml-auto ">
-              <li className="nav-item spacing">
+          <div className="collapse navbar-collapse tn-rt-flt-margin" id="navbarSupportedContent">
+            <ul className="navbar-nav tn-ml-auto ">
+              <li className="nav-item tn-spacing">
                 <button
-                  className={classnames("navbar-opts")}
+                  className={classnames("tn-navbar-opts")}
                   active={true} onClick={this.redirectToLogin}>
                   Login
                 </button>
               </li>
               <li className="nav-item">
                 <button
-                  className={classnames("navbar-opts")}
+                  className={classnames("tn-navbar-opts")}
                   active={true} onClick={this.redirectToSignUp}>
                   SignUp
                 </button>
               </li>
-                {/* <Link
-                className={classnames("nav-link t-font-size-14 tn-link ",
-                  {"active" : this.props.location.pathname=="/about"})}
-                 to="about">About </Link>
-              </li>
-              <li className="nav-item dropdown">
-                <Link
-                className={classnames("nav-link t-font-size-14 tn-link",
-                {"active" : this.props.location.pathname=="/login"})}
-                   to="login">Login </Link>
-              </li>
-              <li className="nav-item dropdown">
-                <Link
-                className={classnames("nav-link t-font-size-14 tn-link",
-                {"active" : this.props.location.pathname=="/signUp"})}
-                 to="signUp">SignUp </Link> */}
-              {/* </li> */}
             </ul>
           </div>
        </nav>
