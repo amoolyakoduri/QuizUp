@@ -5,13 +5,15 @@ import errorReducer from './error/error-reducer';
 import userInfo from './user-info/user-info-reducer';
 import quiz from './quiz/quiz-reducer';
 import tests from './test/test-reducer';
+import report from './report/report-reducer';
 
 const appReducer = combineReducers({
   util : utilReducer,
   errors : errorReducer,
   user : userInfo,
   quiz,
-  tests
+  tests,
+  report
 });
 
 const rootReducer = (state, action) => {

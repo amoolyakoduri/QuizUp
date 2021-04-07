@@ -21,7 +21,7 @@ class Profile extends Component {
     render() {
         return (
             <Fragment>
-                <div class="card profile">
+                <div className="card profile">
                     <div className="profile-container">
                         <div className="p-img-container">
                             <img src={displayPic} className="p-img" width="30" height="30" alt="" loading="lazy"/>
@@ -47,7 +47,7 @@ class Profile extends Component {
                             </div>
                         </div>
                         <div>
-                            <i class="fab fa-github"></i>
+                            <i className="fab fa-github"></i>
                         </div>
                     </div>
                 </div>

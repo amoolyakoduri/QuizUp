@@ -47,16 +47,16 @@ openPrevious = () => {
                                 Create
                             </div>
                         </Link>
-                        <Link className="ts-unlnk" to={`${url}/explore`}>
+                        {/* <Link className="ts-unlnk" to={`${url}/explore`}>
                             <div className={classnames("ts-opt", {ts_selected: pathname === "/tests/explore" ? true : false})}>
                                 Explore
                             </div>
-                        </Link>
-                        <Link className="ts-unlnk" to={`${url}/recommended`}>
+                        </Link> */}
+                        {/* <Link className="ts-unlnk" to={`${url}/recommended`}>
                             <div className={classnames("ts-opt", {ts_selected: pathname === "/tests/recommended" ? true : false})}>
                                 Recommended
                             </div>
-                        </Link>
+                        </Link> */}
                         <Link className="ts-unlnk" to={`${url}/previous`}>
                             <div className={classnames("ts-opt", {ts_selected: pathname === "/tests/previous" ? true : false})}>
                                 Previous

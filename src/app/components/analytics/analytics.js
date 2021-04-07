@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from "react";
-import analytics from '../../../assets/images/analytics.jpg';
 
 class Analytics extends Component {
 

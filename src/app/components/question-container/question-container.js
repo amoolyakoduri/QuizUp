@@ -11,8 +11,8 @@ class QuestionContainer extends Component {
             <Fragment>
                 { curQues!==0 &&
                     <Fragment>
-                <div class="card ques-pad-top">
-                    <div class="card-body ques-style">
+                <div className="card ques-pad-top">
+                    <div className="card-body ques-style">
                         {questions[curQues-1].q}
                     </div>
                 </div>

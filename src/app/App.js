@@ -5,11 +5,9 @@ import setAuthToken from '../config/setAuthToken';
 import { setCurrentUser, logoutUser } from '../redux/user-info/user-info-actions';
 import store from "../store";
 import loader from '../assets/images/loader.png';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Switch, Redirect } from 'react-router-dom';
 import SignUp from './components/signUp/signUp';
 import Login from './components/login/login';
-import Main from './pages/main/main';
-import About from './components/about/about';
 import Dashboard from './components/dashboard/dashboard';
 import Create from './components/create/create';
 import Loader from './components/loader/loader';
@@ -75,15 +73,13 @@ class App extends React.Component {
           <Error/>
           <Switch>
           <AuthRoute type="guest" exact path="/" render={() => (
-            <Redirect to="/about"/>
+            <Redirect to="/tests"/>
             )} />
-            < exact path="/about" component={About} />
             <AuthRoute type="guest" exact path="/login" component={Login} />
             <AuthRoute type="guest" exact path="/signup" component={SignUp} />
-            <AuthRoute type="guest" path="/ui" component={Main}/>
             <AuthRoute type="private" exact path="/create" component={Create} />
             <AuthRoute type="private" exact path="/quiz" component={QuizContainer} />
-            <AuthRoute type="private" exact path="/dashboard" component={Dashboard} />
+            {/* <AuthRoute type="private" exact path="/dashboard" component={Dashboard} /> */}
             <AuthRoute type="private" path="/tests" component={TestsContainer} />
             <AuthRoute type="private" path="/report" component={Report} />
             </Switch>

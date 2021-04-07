@@ -69,6 +69,7 @@ class QuizBody extends Component {
 
     clearResponse = () => {
         this.props.clearResponse();
+        this.props.setQuesStatus("Not Answered");
     }
 
     prevQues = () => {
@@ -97,12 +98,13 @@ class QuizBody extends Component {
             options &&
             Object.entries(options).map((k,ind) =>
                 <div className="qb-mcsc-a-cont">
-                    {/* <div class="form-check form-check-inline"> */}
-                        <input class="form-check-input"
+                    {/* <div className="form-check form-check-inline"> */}
+                        <input className="form-check-input"
                         name="radioOption" type="radio" value={k[1]}
                         checked={curQues.ans===k[0]}
+                        // onChange={this.handleRadioChange}
                         onClick={this.handleRadioChange} id={k[0]}  />
-                        <label class="form-check-label qb-a-mcsc-opt" for={k[0]}>{k[1]}</label>
+                        <label className="form-check-label qb-a-mcsc-opt" for={k[0]}>{k[1]}</label>
                     {/* </div> */}
                 </div>
             )
@@ -110,8 +112,8 @@ class QuizBody extends Component {
         </div>
         let instructions =
             <Fragment>
-            <div class="card qb-pad-top">
-                <div class="card-body qb-ques-style">
+            <div className="card qb-pad-top">
+                <div className="card-body qb-ques-style">
                  Instructions:
                  <br/>
                  <br/>
@@ -147,11 +149,11 @@ class QuizBody extends Component {
                         </div>
                         <div className="qcb-footer">
                             <div className="qcb-cbox">
-                                <input class="form-check-input qcb-radio"
+                                <input className="form-check-input qcb-radio"
                                 type="checkbox" id="review"
                                 checked={this.props.quiz && this.props.quiz.questions[this.props.quiz.curQues].status==="Review"}
                                 onChange={this.review} />
-                                <label class="form-check-label" for="review">Review</label>
+                                <label className="form-check-label" for="review">Review</label>
                             </div>
                             <div>
                                 <Button className="qcb-btn" onClick={this.clearResponse} >Clear Response</Button>

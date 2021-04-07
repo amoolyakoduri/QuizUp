@@ -17,6 +17,14 @@
     padding-left: 0%;
 }
 
+.rpt-tr {
+    text-align: center;
+}
+
+.rpt-tr-title {
+    text-align: left;
+}
+
 .rpt-tr:focus {
     background-color: #f3f2f8;
     border-radius: 10px;
@@ -41,4 +49,24 @@
 
 .rpt-tb {
 
+}
+
+.rt-crt-icon {
+    color: #45a665;
+    margin-right: 10%;
+}
+
+.rt-pcrt-icon {
+    color: yellowgreen;
+    margin-right: 10%;
+}
+
+.rt-na-icon {
+    color: #838488;
+    margin-right: 10%;
+}
+
+.rt-incrt-icon{
+    color: #fb2451;
+    margin-right: 10%;
 }

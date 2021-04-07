@@ -34,7 +34,7 @@ class Recommendations extends Component {
     render() {
         return (
             <Fragment>
-                <div class="recommendations-container">
+                <div className="recommendations-container">
 
                 <ScrollArea
                     speed={0.8}
@@ -43,7 +43,7 @@ class Recommendations extends Component {
                     horizontal={false}
                     smoothScrolling={true}
                     >
-                <div class="r-cards-container">
+                <div className="r-cards-container">
                 {   this.state.recommendations &&
                     this.state.recommendations.map(reco => {
                         return <QuizTuple details={reco} />;

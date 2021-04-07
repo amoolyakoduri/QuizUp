@@ -148,14 +148,14 @@ class SignUp extends Component {
         return (
             <Fragment>
                 <div className="login-container">
-                    <div class="card login-card-container">
-                        <div class="login-card">
+                    <div className="card login-card-container">
+                        <div className="login-card">
                             <div className="login-heading-container">
                                 <h3>SignUp</h3>
                             </div>
-                            <div class="form-group row">
-                                <label for="emialId" class="col-sm-3 col-form-label login-label">Email</label>
-                                <div class="col-sm-9 login-input-container">
+                            <div className="form-group row">
+                                <label for="emialId" className="col-sm-3 col-form-label login-label">Email</label>
+                                <div className="col-sm-9 login-input-container">
                                 <input type="email"
                                     error={errors.email}
                                     className={classnames("form-control login-input-box", {invalid: errors.email})}
@@ -168,9 +168,9 @@ class SignUp extends Component {
                                     }
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label for="password" class="col-sm-3 col-form-label login-label">Password</label>
-                                <div class="col-sm-9 login-input-container">
+                            <div className="form-group row">
+                                <label for="password" className="col-sm-3 col-form-label login-label">Password</label>
+                                <div className="col-sm-9 login-input-container">
                                 <input type="password"
                                     error={errors.password}
                                     className={classnames("form-control login-input-box", {invalid: errors.password})}
@@ -184,9 +184,9 @@ class SignUp extends Component {
                                     }
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label for="username" class="col-sm-3 col-form-label login-label">Username</label>
-                                <div class="col-sm-9 login-input-container">
+                            <div className="form-group row">
+                                <label for="username" className="col-sm-3 col-form-label login-label">Username</label>
+                                <div className="col-sm-9 login-input-container">
                                 <input type="text"
                                     error={errors.password}
                                     className={classnames("form-control login-input-box", {invalid: errors.username})}
@@ -200,9 +200,9 @@ class SignUp extends Component {
                                     }
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label for="firstName" class="col-sm-3 col-form-label login-label">FirstName</label>
-                                <div class="col-sm-9 login-input-container">
+                            <div className="form-group row">
+                                <label for="firstName" className="col-sm-3 col-form-label login-label">FirstName</label>
+                                <div className="col-sm-9 login-input-container">
                                 <input type="text"
                                     error={errors.firstName}
                                     className={classnames("form-control login-input-box", {invalid: errors.firstName})}
@@ -216,9 +216,9 @@ class SignUp extends Component {
                                     }
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label for="lastName" class="col-sm-3 col-form-label login-label">LastName</label>
-                                <div class="col-sm-9 login-input-container">
+                            <div className="form-group row">
+                                <label for="lastName" className="col-sm-3 col-form-label login-label">LastName</label>
+                                <div className="col-sm-9 login-input-container">
                                 <input type="text"
                                     error={errors.lastName}
                                     className={classnames("form-control login-input-box", {invalid: errors.lastName})}

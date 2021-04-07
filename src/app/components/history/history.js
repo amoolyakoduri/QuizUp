@@ -33,9 +33,9 @@ class History extends Component {
     render() {
         return (
             <Fragment>
-                <div class="history-container">
+                <div className="history-container">
                     <div>
-                        <h4 class="h-heading-contaiener" >Previous Quizzes</h4>
+                        <h4 className="h-heading-contaiener" >Previous Quizzes</h4>
                     </div>
                         <ScrollArea
                             speed={0.8}
@@ -44,7 +44,7 @@ class History extends Component {
                             horizontal={false}
                             smoothScrolling={true}
                             >
-                        <div class="h-cards-row-container">
+                        <div className="h-cards-row-container">
                         {   this.state.quizzes &&
                             this.state.quizzes.map(quiz => {
                                 return <QuizCard details={quiz} />;

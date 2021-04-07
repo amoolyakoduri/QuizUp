@@ -1,6 +1,6 @@
 import { QUIZ_DETAILS_SUCCESS,SET_CUR_QUES,
     CLEAR_RESPONSE, SET_QUES_STATUS, SET_RESPONSE, START_TIMER,
-    SET_ELAPSED_TIME
+    SET_ELAPSED_TIME, QUIZ_SUBMIT_SUCCESS
     } from "../action-types";
 
 const initialState = {};

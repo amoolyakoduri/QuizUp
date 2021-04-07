@@ -34,43 +34,52 @@
     background-color: white;
     border-radius: 10px;
     width: 300px;
-    padding: 4%;
+    padding: 2%;
     margin: 2%;
     height: 400px;
     display: flex;
     flex-direction: column;
+    text-align: left;
 }
 
 .rak-card-crt {
-    border: 3px solid #35a594;
+    border: 1px solid #35a594;
 }
 
 .rak-card-pcrt {
-    border: 3px solid #f7c95e;
+    border: 1px solid #f7c95e;
 }
 
 .rak-card-incrt {
-    border: 3px solid #fa2551;
+    border: 1px solid #fa2551;
 }
 
 .rak-card-na {
-    border: 3px solid #dddee5;
+    border: 1px solid #dddee5;
 }
 
 .crt {
     color : #35a594;
+    display: flex;
+    font-size: inherit;
 }
 
 .pcrt {
     color : #f7c95e;
+    display: flex;
+    font-size: inherit;
 }
 
 .incrt {
     color : #fb2451;
+    display: flex;
+    font-size: inherit;
 }
 
 .na {
    color : #dddee5;
+   display: flex;
+   font-size: inherit;
 }
 
 .rak-c-h {
@@ -229,4 +238,24 @@
   text-align: center;
   font-size: large;
   font-weight: 600;
+}
+
+.rak-crt-icon {
+  color: #45a665;
+}
+
+.rak-pcrt-icon {
+  color: yellowgreen;
+}
+
+.rak-na-icon {
+  color: #838488;
+}
+
+.rak-incrt-icon{
+  color: #fb2451;
+}
+
+.rak-icon-mr {
+  margin-right: 10%;
 }

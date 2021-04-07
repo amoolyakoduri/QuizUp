@@ -68,15 +68,30 @@
 }
 
 .ct-pad-left {
-    padding-left: 6% ;
+    padding-left: 15%;
     font-weight: 300;
+    width: 50%;
 }
 
 .ct-categories-style {
-    width: 76.84px;
-    height: 38px;
+    flex: 0 1 15%;
 }
 
 .ct-input {
     border-color: #9c9c9c;
+}
+
+.ct_btn_disabled{
+    background-color: #efebeb;
+    color: #8d8484;
+}
+
+.ct_btn_disabled:hover{
+    background-color: #efebeb;
+    color: #8d8484;
+}
+
+.ct_btn_disabled:focus{
+    background-color: #efebeb;
+    color: #8d8484;
 }

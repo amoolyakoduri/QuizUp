@@ -21,3 +21,16 @@
 .rn-title {
   padding-left: 2%;
 }
+
+.rn-title-date {
+  padding-left: 2%;
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    color: #9da1a5;
+}
+
+.rn-header {
+  width: -webkit-fill-available;
+}

@@ -6,29 +6,16 @@ import { connect } from 'react-redux';
 import {
     withRouter
 } from "react-router-dom";
-import { Multiselect } from 'multiselect-react-dropdown';
-
-import TestListBox from "../test-list-box/test-list-box";
+import Select from 'react-select';
+import classnames from "classnames";
 
 class CreateTests extends Component {
 
     constructor(){
         super();
         this.state = {
-            // categories: [ 'dynamic-programming',
-            // 'backtracking' , 'knapsack', 'recursion'],
-            // options: [
-            //     { label:  'array-lists', value:  'array-lists'  },
-            //     { label:  'backtracking', value:  'backtracking'  },
-            //     { label:  'recursion', value:  'recursion'  },
-            //     { label:  'knapsack', value:  'knapsack'  },
-            // ],
             selectedCategory : "",
             selectedSubCategory : "",
-            // easy : false,
-            // medium : false,
-            // hard : false,
-            // duration : null
         };
     }
 
@@ -36,18 +23,6 @@ class CreateTests extends Component {
         // TODO
         this.props.getCategories();
     }
-
-    // onDiffchange  =  event  => {
-    //     let key = event.target.id;
-    //     this.setState((state, props) => {
-    //         return {[key]: !state[key]};
-    //     });
-    // }
-
-    // onDurchange  =  event  => {
-    //     this.setState({
-    //         duration: parseInt(event.target.value)});
-    //     }
 
         submit = (event) => {
             if(this.state.selectedSubCategory!==""
@@ -68,13 +43,26 @@ class CreateTests extends Component {
         }
 
         selectCategory = (selectedItem) => {
-            this.setState({selectedCategory : selectedItem[0].category,
-            selectedSubCategory : ""});
-            this.props.getSubCategories(selectedItem[0].category);
+            if(selectedItem!=={}){
+                this.setState({selectedCategory : selectedItem.label,
+                selectedSubCategory : ""});
+                this.props.getSubCategories(selectedItem.label);
+            }
+            else {
+                // console.log("removing category "+removedItem);
+                this.setState({selectedCategory : "",
+                selectedSubCategory : ""});
+                this.props.clearSubCategories();
+            }
         }
 
         selectSubCategory = (selectedItem) => {
-            this.setState({selectedSubCategory : selectedItem[0].subCategory});
+            if(selectedItem!=={}){
+                this.setState({selectedSubCategory : selectedItem.label});
+            }
+            else {
+                this.setState({selectedSubCategory : ""});
+            }
         }
 
         removeCategory = (removedItem) => {
@@ -102,17 +90,17 @@ class CreateTests extends Component {
                         <div>
                             Difficulty:
                         </div>
-                        <div class="form-check form-check-inline ct-pad-left">
-                            <input class="form-check-input" type="checkbox" onClick={this.onDiffchange} id="easy" value="Easy" />
-                            <label class="form-check-label" for="easy">Easy</label>
+                        <div className="form-check form-check-inline ct-pad-left">
+                            <input className="form-check-input" type="checkbox" onClick={this.onDiffchange} id="easy" value="Easy" />
+                            <label className="form-check-label" for="easy">Easy</label>
                         </div>
-                        <div class="form-check form-check-inline ct-pad-left">
-                            <input class="form-check-input" type="checkbox" id="medium" onClick={this.onDiffchange} value="Medium" />
-                            <label class="form-check-label" for="medium">Medium</label>
+                        <div className="form-check form-check-inline ct-pad-left">
+                            <input className="form-check-input" type="checkbox" id="medium" onClick={this.onDiffchange} value="Medium" />
+                            <label className="form-check-label" for="medium">Medium</label>
                         </div>
-                        <div class="form-check form-check-inline ct-pad-left">
-                            <input class="form-check-input" type="checkbox" id="hard" onClick={this.onDiffchange}  value="Hard" />
-                            <label class="form-check-label" for="hard">Hard</label>
+                        <div className="form-check form-check-inline ct-pad-left">
+                            <input className="form-check-input" type="checkbox" id="hard" onClick={this.onDiffchange}  value="Hard" />
+                            <label className="form-check-label" for="hard">Hard</label>
                         </div>
                     </div>
                     <div className="ct-row-flex">
@@ -120,7 +108,7 @@ class CreateTests extends Component {
                             Duration:
                         </div>
                         <div className="ct-pad-left">
-                            <input type="number" onChange={this.onDurchange} class="form-control ct-input" id="duration" placeholder="in minutes..." aria-describedby="duration" />
+                            <input type="number" onChange={this.onDurchange} className="form-control ct-input" id="duration" placeholder="in minutes..." aria-describedby="duration" />
                         </div>
                     </div> */}
                     <div className="ct-row-flex">
@@ -129,12 +117,27 @@ class CreateTests extends Component {
                         </div>
                         <div className="ct-pad-left">
                             <div className="app">
-                                <Multiselect singleSelect={true} selectionLimit={1}
+                                {/* <Multiselect singleSelect={true} selectionLimit={1}
                                 onSelect={this.selectCategory}
                                 onRemove={this.removeCategory}
                                 selectedValues={this.state.selectedCategory}
                                 options={this.props.tests.categories}
                                 displayValue="category"
+                                /> */}
+                                {/* <MultiSelect
+                                        // onChange={this.handleOnchange}
+                                        onChange={this.selectCategory}
+                                        options={this.props.tests.categories}
+                                        singleSelect={true}
+                                        clearable={false}
+                                        downArrow={true}
+                                        closeOnSelect={false}
+                                        /> */}
+                                <Select
+                                onChange={this.selectCategory}
+                                value={this.state.selectedCategory}
+                                placeholder={this.state.selectedCategory}
+                                options={this.props.tests.categories}
                                 />
                             </div>
                         </div>
@@ -149,13 +152,28 @@ class CreateTests extends Component {
                             </div>
                             <div className="ct-pad-left">
                                 <div className="app">
-                                    <Multiselect singleSelect={true} selectionLimit={1}
+                                    {/* <Multiselect singleSelect={true} selectionLimit={1}
                                     onSelect={this.selectSubCategory}
                                     onRemove={this.removeSubCategory}
                                     selectedValues={this.state.selectedSubCategory}
                                     options={this.props.tests.subCategories}
                                     displayValue="subCategory"
-                                    />
+                                    /> */}
+                                    {/* <MultiSelect
+                                        // onChange={this.handleOnchange}
+                                        onChange={this.selectSubCategory}
+                                        options={this.props.tests.subCategories}
+                                        singleSelect={true}
+                                        clearable={false}
+                                        downArrow={true}
+                                        closeOnSelect={false}
+                                        /> */}
+                                    <Select
+                                        onChange={this.selectSubCategory}
+                                        value={this.state.selectedSubCategory}
+                                        placeholder={this.state.selectedSubCategory}
+                                        options={this.props.tests.subCategories}
+                                        />
                                 </div>
                             </div>
                         </div>
@@ -164,7 +182,10 @@ class CreateTests extends Component {
                         <div>
                             <button type="button"
                             // disabled={this.state.selectedSubCategory===""?true:false}
-                             onClick={this.submit} class="btn btn-primary btn-sm ct-btn">Start Quiz!</button>
+                             onClick={this.submit}
+                            //  className="btn btn-primary btn-sm ct-btn"
+                             className={classnames("btn btn-primary btn-sm ct-btn", {ct_btn_disabled: this.state.selectedSubCategory===""})}
+                             >Start Quiz!</button>
                         </div>
                     </div>
             </div>

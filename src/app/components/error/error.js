@@ -4,8 +4,17 @@ import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/theme-github";
 import { Alert} from 'reactstrap';
 import { connect } from 'react-redux'
+import {clearError} from '../../../redux/error/error-actions';
 
 class Error extends Component {
+
+
+    componentDidMount(){
+        // setTimeout(
+        //     () => this.props.clearError(),
+        //     10000,
+        // );
+    }
 
     render() {
         return (
@@ -18,7 +27,6 @@ class Error extends Component {
                         </Alert>
 
                })
-
                 }
                 </div>
             </Fragment>
@@ -32,7 +40,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        // loginUser: (payload) => { dispatch(loginUser(payload)) },
+        clearError: () => {return dispatch(clearError()) },
     }
   }
 

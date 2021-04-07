@@ -63,8 +63,8 @@ class QuizContainerPrevious extends Component {
                 <div className="qcp--flex-row">
                     <Sidenav questions={this.state.quiz.questions}/>
                     <div className="qcp--pad-left">
-                        <div class="card ">
-                            <div class="card-body qcp--ques-style">
+                        <div className="card ">
+                            <div className="card-body qcp--ques-style">
                                 <div>
                                     Quiz Id {quiz?.quiz?.id}
                                 </div>
@@ -76,8 +76,8 @@ class QuizContainerPrevious extends Component {
                         {
                             curQues==0 &&
                             <Fragment>
-                            <div class="card ques-pad-top">
-                                <div class="card-body ques-style">
+                            <div className="card ques-pad-top">
+                                <div className="card-body ques-style">
                                  Instructions:
                                  <br/>
                                  <br/>

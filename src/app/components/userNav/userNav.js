@@ -31,20 +31,21 @@ class UserNav extends Component {
 
   render() {
     let path = window.location.pathname;
+    let user = JSON.parse(localStorage.getItem("user"));
     return (
       <Fragment>
         { this.props.user && this.props.user.isLoggedIn &&
       <div>
         <nav className="navbar navbar-expand-lg usernav">
-          <a className="un-navbar-brand" href="/about">
+          <a className="un-navbar-brand" href="#">
             QuizUp!
           </a>
           <div className="un-navbar-opts-container">
-          <button
+          {/* <button
           className={classnames("un-navbar-opts", {"un-selected": path === "/dashboard" ? true : false})}
-          active={true} onClick={this.redirectToDashboard}>
+           onClick={this.redirectToDashboard}>
             Dashboard
-          </button>
+          </button> */}
 
           <button
           className={classnames("un-navbar-opts", {"un-selected": path.startsWith("/tests/") ? true : false})}
@@ -55,14 +56,14 @@ class UserNav extends Component {
 
           <div className="collapse navbar-collapse un-rt-flt-margin" id="navbarSupportedContent">
             <ul className="navbar-nav un-ml-auto">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle un-navbar-opts" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  {this.props.user.username}
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle un-navbar-opts" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {user.username}
                 </a>
-                <div class="dropdown-menu dropdown-menu-lg-left" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item un-ddm-opt" href="/profile">Profile</a>
-                  <a class="dropdown-item un-ddm-opt" href="/settings">Settings</a>
-                  <div class="dropdown-divider"></div>
+                <div className="dropdown-menu dropdown-menu-lg-left" aria-labelledby="navbarDropdown">
+                  {/* <a className="dropdown-item un-ddm-opt" href="/profile">Profile</a> */}
+                  {/* <a className="dropdown-item un-ddm-opt" href="/settings">Settings</a> */}
+                  <div className="dropdown-divider"></div>
                   <Button className="un-btn" onClick={this.logout} >Logout</Button>
                 </div>
               </li>

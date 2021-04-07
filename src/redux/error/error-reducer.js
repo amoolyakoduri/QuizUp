@@ -1,4 +1,4 @@
-import { SET_ERRORS } from '../action-types';
+import { SET_ERRORS,CLEAR_ERRORS } from '../action-types';
 
 const initialState = [];
 
@@ -8,7 +8,8 @@ export default function(state = initialState, action) {
           return [
             ...state,
             action.payload];
-
+      case CLEAR_ERRORS:
+        return [];
       default:
         return state;
     }

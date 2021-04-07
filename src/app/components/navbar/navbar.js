@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import TopNav from "../topnav/topnav";
 import UserNav from "../userNav/userNav";
 import {withRouter} from "react-router-dom";
-import ReportNav from '../report-nav/report-nav';
 
 class Navbar extends Component {
 
@@ -19,7 +18,7 @@ class Navbar extends Component {
             path==="/quiz" ?
             <div/> :
             path==="/report" ?
-            <ReportNav /> :
+            <div/> :
             <UserNav/>
           }
         </Fragment>

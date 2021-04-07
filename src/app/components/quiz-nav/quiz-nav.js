@@ -3,9 +3,8 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import classnames from "classnames";
 import Countdown from 'react-countdown';
-import { setCurQues,setElapsedTime } from '../../../redux/quiz/quiz-actions';
-import { createReport } from '../../../redux/report/report-actions';
-
+import { setCurQues,setElapsedTime, submitQuiz } from '../../../redux/quiz/quiz-actions';
+import { getReport } from '../../../redux/report/report-actions';
 
 class QuizNav extends Component {
 
@@ -24,11 +23,36 @@ class QuizNav extends Component {
 };
 
   submitQuiz = () => {
-    // TODO
-    // this.props.createReport(this.props.quiz);
+    let numToLetter = {
+      0 : "a",
+      1 : "b",
+      2 : "c",
+      3 : "d"
+    }
+    let questions = [];
+    this.props.quiz.questions.map( question => {
+        let ques = {
+          id : question.id,
+          elapsedTime : question.elapsedTime,
+          answer : numToLetter[question.ans] === undefined ? "" : numToLetter[question.ans]
+        }
+        questions.push(ques);
+    })
+    let quizData = {
+      startDate : this.props.quiz.startDate,
+      questions : questions
+    }
     this.stopTimer(this.props.quiz.questions[this.props.quiz.curQues].startTime,
       this.props.quiz.curQues)
-    this.props.history.push("/report");
+    this.props.submitQuiz(quizData)
+    .then( res => {
+      if(res.success)
+        this.props.getReport(res.testId)
+        .then( res => {
+          if(res.success);
+            this.props.history.push("/report");
+        })
+    })
   }
 
   showInstructions = () => {
@@ -47,7 +71,7 @@ class QuizNav extends Component {
       <Fragment>
       <div className="qn-parent">
         <nav className="navbar navbar-expand-lg py-4">
-          <a className="qn-navbar-brand" href="/about">
+          <a className="qn-navbar-brand" href="#">
             QuizUp!
           </a>
           <div className="collapse navbar-collapse qn-rt-flt-margin" id="navbarSupportedContent">
@@ -55,7 +79,7 @@ class QuizNav extends Component {
                 <li className="nav-item qn-spacing">
                     <button
                     className={classnames("qn-navbar-opts qn-unbtn")}
-                    active={true} onClick={this.showInstructions}>
+                     onClick={this.showInstructions}>
                     Instructions
                     </button>
               </li>
@@ -67,11 +91,10 @@ class QuizNav extends Component {
               <li className="nav-item qn-spacing">
                 <button
                   className={classnames("qn-navbar-opts qn-btn")}
-                  active={true} onClick={this.submitQuiz}>
+                   onClick={this.submitQuiz}>
                   Submit
                 </button>
               </li>
-
             </ul>
           </div>
        </nav>
@@ -84,7 +107,8 @@ class QuizNav extends Component {
 const mapDispatchToProps = (dispatch) => {
   return {
       setCurQues : (curQues) => { return dispatch(setCurQues(curQues))},
-      createReport : (quiz) => { return dispatch(createReport(quiz))},
+      submitQuiz : (quizData) => { return dispatch(submitQuiz(quizData))},
+      getReport: (testId) => {return dispatch(getReport(testId)); },
       setElapsedTime : (elapsedTime,curQues) => { return dispatch(setElapsedTime(elapsedTime,curQues))},
   }
 }

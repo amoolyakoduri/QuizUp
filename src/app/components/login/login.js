@@ -5,11 +5,6 @@ import { Link , Redirect } from "react-router-dom";
 import classnames from "classnames";
 import { connect } from 'react-redux'
 import { loginUser} from '../../../redux/user-info/user-info-actions';
-import setAuthToken from '../../../config/setAuthToken';
-import jwt_decode from "jwt-decode";
-import store from "../../../store";
-import { setCurrentUser,logoutUser } from '../../../redux/user-info/user-info-actions';
-
 
 class Login extends Component {
 
@@ -79,17 +74,17 @@ class Login extends Component {
         return (
             <Fragment>
                 <div className="login-container">
-                    <div class="card login-card-container">
-                        <div class="login-card">
+                    <div className="card login-card-container">
+                        <div className="login-card">
                             <div className="login-heading-container">
                                 <h3>Login</h3>
                             </div>
-                            <div class="form-group row">
-                                <label for="username" class="col-sm-3 col-form-label login-label">Username</label>
-                                <div class="col-sm-9 login-input-container">
+                            <div className="form-group row">
+                                <label for="username" className="col-sm-3 col-form-label login-label">Username</label>
+                                <div className="col-sm-9 login-input-container">
                                 <input type="text"
                                     className={classnames("form-control login-input-box", {invalid: this.state.errors.username})}
-                                    class="form-control login-input-box" onChange={this.onChange}
+                                    className="form-control login-input-box" onChange={this.onChange}
                                     id="username"
                                     placeholder="Username "
                                     required/>
@@ -98,9 +93,9 @@ class Login extends Component {
                                     }
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label for="password" class="col-sm-3 col-form-label login-label">Password</label>
-                                <div class="col-sm-9 login-input-container">
+                            <div className="form-group row">
+                                <label for="password" className="col-sm-3 col-form-label login-label">Password</label>
+                                <div className="col-sm-9 login-input-container">
                                 <input type="password"
                                     // error={errors.password}
                                     className={classnames("form-control login-input-box", {invalid: this.state.errors.password})}

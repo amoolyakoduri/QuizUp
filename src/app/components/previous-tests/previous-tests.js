@@ -1,16 +1,38 @@
 import React, { Component, Fragment } from "react";
 import  'react-multiple-select-dropdown-lite/dist/index.css'
-import { startQuiz }  from '../../../redux/quiz/quiz-actions';
+import { getPreviousTests }  from '../../../redux/test/test-actions';
 import { connect } from 'react-redux';
 import {
     withRouter
 } from "react-router-dom";
-import TestListBox from "../test-list-box/test-list-box";
+import { Button } from "react-bootstrap";
+import { getReport }  from '../../../redux/report/report-actions';
+
 
 class PreviousTests extends Component {
 
+    constructor(props){
+        super(props);
+        this.state = {
+        }
+    }
+
+    componentDidMount(){
+        this.props.getPreviousTests();
+    }
+
+    viewReport = (testId) => {
+        this.props.getReport(testId)
+        .then( res => {
+            if(res.success)
+            this.props.history.push("/report");
+          })
+    }
+
 
         render() {
+            let previousTests = this.props.tests.previousTests;
+            let ind =0;
             return (
                 <Fragment>
                     <div className="pt-parent">
@@ -18,9 +40,24 @@ class PreviousTests extends Component {
                             <h4 className="pt-heading">Previous Tests</h4>
                         </div>
                         <div className="pt-list">
-                            <TestListBox/>
-                            <TestListBox/>
-                            <TestListBox/>
+                            {previousTests &&
+                            previousTests.map(test => {
+                                ind = ind+1;
+                                return (
+                                    <div className="pt-tlb-parent">
+                                        <div className="pt-tlb-number">
+                                            {ind}
+                                        </div>
+                                        <div className="pt-tlb-name">
+                                            {test.interactions[0].categories.subCategory}
+                                        </div>
+                                        <div className="pt-tlb-optns">
+                                            <Button className="pt-tlb-btn" onClick={() => { return this.viewReport(test.id)}} >View Report</Button>
+                                        </div>
+                                    </div>
+                                )
+                            })}
+
                         </div>
                     </div>
                 </Fragment>
@@ -29,14 +66,14 @@ class PreviousTests extends Component {
         }
 
         const mapStateToProps = state => ({
-            auth: state.auth,
             errors: state.errors,
-            success:state.success
+            tests : state.tests
         });
 
         const mapDispatchToProps = (dispatch) => {
             return {
-                startQuiz: (payload) => { dispatch(startQuiz(payload)) },
+                getPreviousTests: () => {return dispatch(getPreviousTests()); },
+                getReport: (testId) => {return dispatch(getReport(testId)); },
             }
         }
 

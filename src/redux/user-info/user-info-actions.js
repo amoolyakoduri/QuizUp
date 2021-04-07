@@ -6,6 +6,9 @@ import  {
     SET_ERRORS,
     SET_CURRENT_USER
   } from '../action-types';
+import {setError} from '../error/error-actions';
+import {getPreviousTests} from '../test/test-actions';
+
 let backend_url = config.host+":"+config.back_end_port
 
 
@@ -26,22 +29,25 @@ export const loginUser = (username,password) => dispatch => {
                   type: SET_CURRENT_USER,
                   payload: data
                 });
+                dispatch(getPreviousTests());
                 localStorage.setItem("user",JSON.stringify(res.data));
                 return {"success" : true}
               }
         }).catch(function (error) {
           console.log(error)
           if(error.response.status === 401 ){
-            dispatch({
-              type: SET_ERRORS,
-              payload: "Invalid Credentials. Please try again."
-            });
+            dispatch(setError("Invalid Credentials. Please try again."))
+            // dispatch({
+            //   type: SET_ERRORS,
+            //   payload: "Invalid Credentials. Please try again."
+            // });
           }
           else{
-            dispatch({
-              type: SET_ERRORS,
-              payload: "Login Failed. Please try again."
-            });
+            dispatch(setError("Login Failed. Please try again."))
+            // dispatch({
+            //   type: SET_ERRORS,
+            //   payload: "Login Failed. Please try again."
+            // });
           }
           return { "success": false};
         });
@@ -69,10 +75,11 @@ export const signUp = (accountDetails,history) =>{
             }
         })
         .catch(err => {
-            dispatch({
-              type: SET_ERRORS,
-              payload: "SignUp Failed. Please try again."
-            });
+            dispatch(setError("SignUp Failed. Please try again."))
+            // dispatch({
+            //   type: SET_ERRORS,
+            //   payload: "SignUp Failed. Please try again."
+            // });
             return { "success": false};
           }
           );

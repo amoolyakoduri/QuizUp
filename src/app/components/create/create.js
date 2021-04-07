@@ -58,10 +58,10 @@ submit = (event) => {
     render() {
         return (
             <Fragment>
-                <div class="jumbotron jumbotron-fluid cr-jumbo-container shadow">
-                    <div class="cr-container">
+                <div className="jumbotron jumbotron-fluid cr-jumbo-container shadow">
+                    <div className="cr-container">
                         <div>
-                            <h1 class="display">Ready to start quizzing?</h1>
+                            <h1 className="display">Ready to start quizzing?</h1>
                         </div>
                         <div>
                             <p>Create your own custom quiz now!</p>
@@ -72,17 +72,17 @@ submit = (event) => {
                                 <div>
                                     Difficulty:
                                 </div>
-                                <div class="form-check form-check-inline cr-pad-left">
-                                    <input class="form-check-input" type="checkbox" onClick={this.onDiffchange} id="easy" value="Easy" />
-                                    <label class="form-check-label" for="easy">Easy</label>
+                                <div className="form-check form-check-inline cr-pad-left">
+                                    <input className="form-check-input" type="checkbox" onClick={this.onDiffchange} id="easy" value="Easy" />
+                                    <label className="form-check-label" for="easy">Easy</label>
                                 </div>
-                                <div class="form-check form-check-inline cr-pad-left">
-                                    <input class="form-check-input" type="checkbox" id="medium" onClick={this.onDiffchange} value="Medium" />
-                                    <label class="form-check-label" for="medium">Medium</label>
+                                <div className="form-check form-check-inline cr-pad-left">
+                                    <input className="form-check-input" type="checkbox" id="medium" onClick={this.onDiffchange} value="Medium" />
+                                    <label className="form-check-label" for="medium">Medium</label>
                                 </div>
-                                <div class="form-check form-check-inline ctr-pad-left">
-                                    <input class="form-check-input" type="checkbox" id="hard" onClick={this.onDiffchange}  value="Hard" />
-                                    <label class="form-check-label" for="hard">Hard</label>
+                                <div className="form-check form-check-inline ctr-pad-left">
+                                    <input className="form-check-input" type="checkbox" id="hard" onClick={this.onDiffchange}  value="Hard" />
+                                    <label className="form-check-label" for="hard">Hard</label>
                                 </div>
                             </div>
                             <div className="cr-row-flex">
@@ -90,7 +90,7 @@ submit = (event) => {
                                     Duration:
                                 </div>
                                 <div className="cr-pad-left">
-                                    <input type="number" onChange={this.onDurchange} class="form-control cr-input" id="duration" placeholder="in minutes..." aria-describedby="duration" />
+                                    <input type="number" onChange={this.onDurchange} className="form-control cr-input" id="duration" placeholder="in minutes..." aria-describedby="duration" />
                                 </div>
                             </div>
                             <div className="cr-row-flex">
@@ -111,7 +111,7 @@ submit = (event) => {
                             </div>
                             <div className="cr-row-flex">
                                 <div>
-                                <button type="button" onClick={this.submit} class="btn btn-primary btn-sm">Start Quiz!</button>
+                                <button type="button" onClick={this.submit} className="btn btn-primary btn-sm">Start Quiz!</button>
                                 </div>
                             </div>
                         </div>

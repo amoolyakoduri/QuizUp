@@ -20,27 +20,30 @@ class TopNav extends Component {
         { !this.props.isLoggedIn &&
       <div>
         <nav className="navbar navbar-expand-lg topnav">
-          <a className="tn-navbar-brand" href="/about">
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span>
+  </button>
+          <a className="tn-navbar-brand" href="#">
             QuizUp!
           </a>
-          <div className="collapse navbar-collapse tn-rt-flt-margin" id="navbarSupportedContent">
-            <ul className="navbar-nav tn-ml-auto ">
+          <div className="collapse navbar-collapse un-rt-flt-margin" id="navbarSupportedContent">
+            <ul className="navbar-nav tn-ml-auto">
               <li className="nav-item tn-spacing">
                 <button
                   className={classnames("tn-navbar-opts")}
-                  active={true} onClick={this.redirectToLogin}>
+                   onClick={this.redirectToLogin}>
                   Login
                 </button>
               </li>
               <li className="nav-item">
                 <button
                   className={classnames("tn-navbar-opts")}
-                  active={true} onClick={this.redirectToSignUp}>
+                   onClick={this.redirectToSignUp}>
                   SignUp
                 </button>
               </li>
             </ul>
-          </div>
+            </div>
        </nav>
       </div>
   }
