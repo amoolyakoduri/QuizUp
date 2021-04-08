@@ -58,7 +58,7 @@ class UserNav extends Component {
             <ul className="navbar-nav un-ml-auto">
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle un-navbar-opts" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  {user.username}
+                  {user!=undefined ? user.username : this.props.user.username}
                 </a>
                 <div className="dropdown-menu dropdown-menu-lg-left" aria-labelledby="navbarDropdown">
                   {/* <a className="dropdown-item un-ddm-opt" href="/profile">Profile</a> */}

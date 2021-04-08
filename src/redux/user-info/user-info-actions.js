@@ -7,7 +7,6 @@ import  {
     SET_CURRENT_USER
   } from '../action-types';
 import {setError} from '../error/error-actions';
-import {getPreviousTests} from '../test/test-actions';
 
 let backend_url = config.host+":"+config.back_end_port
 
@@ -29,7 +28,6 @@ export const loginUser = (username,password) => dispatch => {
                   type: SET_CURRENT_USER,
                   payload: data
                 });
-                dispatch(getPreviousTests());
                 localStorage.setItem("user",JSON.stringify(res.data));
                 return {"success" : true}
               }
